@@ -1,0 +1,41 @@
+// background 
+body{
+    background-image: url("../images/mobile-topBG.svg");
+    background-repeat: no-repeat;
+    background-size: 445px;
+    color: $primary;
+
+    @include media-breakpoint-up(md){
+        background-image: url("../images/desktopBG.svg");
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+}
+
+// main image in header
+.header-image {
+    @include media-breakpoint-down(md){
+        display: none;
+    }
+    max-width: 500px;
+}
+
+// responsive customized container for header
+.header-container {
+    @include media-breakpoint-down(sm){
+        @include make-container();
+        width: 324px;
+    }
+    @include media-breakpoint-down(md){
+        @include make-container();
+        width: 524px;
+    }
+}
+
+// lead text from lg breakpoint
+.header-text{
+    @include media-breakpoint-up(lg){
+        @include font-size($lead-font-size);
+      font-weight: $lead-font-weight;
+    }
+}

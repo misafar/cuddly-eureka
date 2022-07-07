@@ -1,0 +1,31 @@
+// basic list styles for main section
+@mixin basic_list {
+    position: relative;
+    padding-left: 0.4rem;
+}
+
+
+// unorded list reset
+@mixin list_reset {
+    padding: 0 0 0 1rem;
+    list-style: none;
+}
+// list styles
+@mixin list-styles {
+    content: url("/images/checkboxMobile.svg");
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: -1.5rem;
+        top: 15%;
+        @include media-breakpoint-up(md){
+            width: 34px;
+            height: 34px;
+            left: -2.5rem;
+        }
+        @include media-breakpoint-up(lg){
+            width: 46px;
+            height: 46px;
+            left: -3.5rem;
+        }
+}

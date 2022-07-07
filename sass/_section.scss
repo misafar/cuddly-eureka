@@ -1,0 +1,104 @@
+// bg of main part
+.main {
+    background-color: $success;
+    border-top: 2px solid $secondary;
+    border-bottom: 2px solid $primary;
+    margin-top: 14rem;
+    @include media-breakpoint-up(md){
+        border-top: 4px solid $secondary;
+        border-bottom: 4px solid $primary;
+    }
+}
+
+// central button
+.transition_button{
+    height: 36px;
+    width: 65vw;
+    border-radius: 16px;
+    p {
+        margin: 0;
+    }
+    @include media-breakpoint-up(md){
+        font-size: 1.75rem;
+        height: 70px;
+        border-radius: 30px;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 2.5rem;
+        height: 95px;
+        border-radius: 40px;
+    }
+}
+
+// list icon
+.main ul{
+    margin: 0 0 1rem 0;
+    @include list_reset;
+}
+.main .normal li {
+    @include basic_list;
+    &::before {
+        @include list-styles;
+    }
+}
+
+.main .reverse li{
+    @include basic_list;
+    &::after{
+        content: url("/images/checkboxMobile.svg");
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: -1.5rem;
+        top: 15%;
+        @include media-breakpoint-up(md){
+            width: 34px;
+            height: 34px;
+            right: -2.5rem;
+        }
+        @include media-breakpoint-up(lg){
+            width: 46px;
+            height: 46px;
+            right: -3.5rem;
+        }
+    }
+}
+
+
+//local font size
+.main_text {
+    font-size: $font-size-base;
+    @include media-breakpoint-up(md){
+        font-size: $font-size-base* 1.25;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: $font-size-base* 1.5;
+    }
+}
+
+//list of badges
+.badge-list {
+    @include list_reset;
+    @include media-breakpoint-up(lg){
+        font-size: 2rem;
+    }
+}
+
+
+.badge-list li{
+    position: relative;
+    padding-left: 1.4rem;
+    &::before {
+        content: url("/images/badge.svg");
+        position: absolute;
+        width: 34px;
+        height: 51px;
+        left: -1.2rem;
+        top: 25%;
+        @include media-breakpoint-up(lg){
+        width: 48px;
+        height: 71px;
+        left: -2.2rem;
+        }
+    }
+}
